@@ -5,11 +5,14 @@ import Section from '../../../HOC/Section';
 import blogImage1 from '../../../assets/img/blog1.jpg';
 import blogImage2 from '../../../assets/img/blog2.jpg';
 import blogImage3 from '../../../assets/img/blog3.jpg';
+import prec90 from '../../../assets/img/per90.gif';
+import prec60 from '../../../assets/img/per60.gif';
+ 
 
 const Blog = () => {
   return (
     <Section id='blog'>
-      <div className='container pt-2 pb-5'>
+      <div className='container pt-2 pb-5 '>
         <div className='section-header pt-5 pb-5 text-center'>
           <h3 className='section-title'>
             <span>Our </span>Blog
@@ -71,6 +74,23 @@ const Blog = () => {
               </div>
             </div>
           </div>
+          <div className="flex flex-col pt-5 pb-20 bg-white">
+      <h3 className="text-center custom-color fw-bold mb-5 pt-3">
+        Start Saving Water And Money Today
+      </h3>
+  <div className="flex flex-col px-16 mt-20 w-full max-md:px-5 max-md:mt-10 max-md:max-w-full">
+  <div className="flex gap-5 text-2xl font-bold text-center text-black max-md:flex-wrap max-md:mr-2.5 max-md:max-w-full">
+    <div className="mt-20 text-4xl font-medium text-black max-md:mt-10 max-md:max-w-full mb-4">
+      The Flo Smart Water Monitor and Shutoff can reduce water usage by up to 90%.
+    </div>
+  </div>
+</div>
+    </div>
+    <div className="d-flex justify-content-around">
+    <img src={prec90} className="percImg mb-5" alt="90% Reduction" />
+    <img src={prec60} className="percImg mb-5" alt="60% Reduction" />
+  </div>
+
         </div>
       </div>
     </Section>

@@ -2,6 +2,8 @@ import React from 'react';
 
 import Section from '../../../HOC/Section';
 import aboutImage from '../../../assets/img/about.jpg';
+import device from '../../../assets/img/device.png';
+import { width } from '@mui/system';
 
 const about = () => {
   return (
@@ -11,45 +13,50 @@ const about = () => {
           <h3 className='section-title'>
             <span>Our </span>Company
           </h3>
-          <h6 className='section-subtitle mr-auto ml-auto'>
-            Individualized quality care that meets the total needs of the
-            patient Individualized quality care that quality care that
-            Individualized quality care that meets the total.
-          </h6>
         </div>
-        <div className='section-content'>
-          <div className='row'>
-            <div className='col-md-12 col-lg-6 mb-3'>
-              <div className='aboutImage'>
-                <img src={aboutImage} alt='about company' />
-              </div>
-            </div>
+
+        {/* <div className='section-content d-flex'>
+            
             <div className='col-md-12 col-lg-6'>
-              <h3 className='about-title'>About us</h3>
+
+              <h3 className='about-title'>Welcome to sabib <br/>
+              Your Digital Water Companion
+              </h3>
               <div className='about-description'>
                 <p>
-                  Curabitur aliquet quam id dui posuere blandit. Donec
-                  sollicitudin molestie malesuada Pellentesque ipsum id orci
-                  porta dapibus. Vivamus suscipit tortor eget felis porttitor
-                  volutpat.
-                </p>
-                <p>
-                  Neque porro quisquam est, qui dolorem ipsum quia dolor , sed
-                  quia non numquam eius modi tempora incidunt ut labore et
-                  dolore magnam aliquam quaerat voluptatem. Nisi ut aliquid ex
-                  ea commodi consequatur?
-                </p>
-                <p>
-                  Quis autem vel eum iure reprehenderit qui in ea voluptate
-                  velit esse quam nihil molestiae consequatur, vel illum qui
-                  dolorem eum fugiat quo voluptas nulla pariatur
+                Step into a world where technology meets sustainability. Sabib is here to guide you on a journey of water conservation, real-time monitoring, and effortless control. 
+                Begin your seamless experience today and empower yourself with the tools to make a difference
                 </p>
                 <button className='btn btn-primary rounded-0'>Read More</button>
               </div>
             </div>
-          </div>
-        </div>
+            <div className='d-flex justify-content-end'>
+            <img src={device} alt='sabib device'  className='aboutImg' style={{ maxWidth: '50%' }}/>
+            </div>
+          </div> */}
+          <div className='section-content'>
+  <div className='row align-items-center'>
+    <div className='col-md-12 col-lg-6 order-2 order-lg-1'>
+      <h3 className='about-title fw-bold'>
+        Welcome to Sabib <br/>
+        Your Digital Water Companion
+      </h3>
+      <div className='about-description'>
+        <p>
+          Step into a world where technology meets sustainability. Sabib is here to guide you on a journey of water conservation, real-time monitoring, and effortless control. 
+          Begin your seamless experience today and empower yourself with the tools to make a difference.
+        </p>
+        <button className='btn btn-primary rounded-0'>Read More</button>
       </div>
+    </div>
+
+    <div className='col-md-12 col-lg-6 order-2 order-lg-2 text-center'>
+      <img src={device} alt='sabib device' className='img-fluid aboutImg' style={{ maxWidth: '40%' }} />
+    </div>
+  </div>
+</div>
+
+        </div>
     </Section>
   );
 };

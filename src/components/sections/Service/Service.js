@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Section from '../../../HOC/Section';
-
+import how from '../../../assets/img/how.gif'
 const Service = () => {
   return (
     <Section id='services'>
@@ -103,8 +103,23 @@ const Service = () => {
               </div>
             </div>
           </div>
-        </div>
+          <div className="flex flex-col items-center py-20 text-center bg-white bg-opacity-0">
+      <h3 className="custom-color fw-bold mb-5">
+        How It Works
+        <br />
+      </h3>
+      <div className="mt-20 text-4xl font-medium text-black max-md:mt-10 max-md:max-w-full mb-4">
+        The Sabib Water Monitor and Shutoff is installed on your home’s main
+        water supply line to proactively provide leak detection for your whole
+        home.
       </div>
+      <img
+          src={how} alt='how it works'      
+        className="w-100"
+      />
+    </div>
+        </div>
+        </div>
     </Section>
   );
 };

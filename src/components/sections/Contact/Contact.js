@@ -18,7 +18,7 @@ const contact = () => {
         </div>
         <div className='section-content'>
           <div className='row'>
-            <div className='col-md-9 col-lg-7 mr-auto ml-auto'>
+            <div className='col-md-9 col-lg-7'>
               <form>
                 <div className='form-group'>
                   <input
@@ -43,7 +43,7 @@ const contact = () => {
                     placeholder='Enter Message...'
                   />
                 </div>
-                <div className='form-group text-center'>
+                <div className='form-group text-center mt-5'>
                   <button className='btn btn-block btn-primary rounded-0 mr-auto ml-auto'>
                     Send
                   </button>

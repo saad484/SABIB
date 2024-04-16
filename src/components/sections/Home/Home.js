@@ -13,7 +13,7 @@ const Home = () => {
           Your browser does not support the video tag.
         </video>
         <div className='content-overlay '>
-          <div className='home-content p-5 text-center text-light '>
+          <div className='home-content p-5 text-center text-light m-5'>
             <h1 className='title'>Stay One Step Ahead of Water Damage</h1>
             <div className='p-5 position-relative z-index-1'>
               <Link target='about' classes='btn btn-primary rounded-0 mr-2'>
