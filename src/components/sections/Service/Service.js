@@ -24,10 +24,10 @@ const Service = () => {
                   <i className='fas fa-briefcase' />
                 </div>
                 <div className='service-body'>
-                  <h5 className='service-title'>Business Planning</h5>
+                  <h5 className='service-title'>24/7 Leak Detection</h5>
                   <p className='service-description'>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid
+                    Our latest FloSense™ 3.0 technology uses machine learning to better understand and analyze your water usage patterns. With more precise monitoring and leak detection accuracy, your Flo Smart Water Monitor and Shutoff
+                    can better protect your home by sending timely, reliable alerts when it matters most.
                   </p>
                 </div>
               </div>
@@ -38,10 +38,10 @@ const Service = () => {
                   <i className='fas fa-chart-bar' />
                 </div>
                 <div className='service-body'>
-                  <h5 className='service-title'>Product Marketing</h5>
+                  <h5 className='service-title'>Automatic Shutoff</h5>
                   <p className='service-description'>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid
+                    Stop leaks in their tracks — even when you’re away from home — by setting your smart water
+                    shutoff to automatically close your water valve when it detects a leak. You can even start and stop your water flow by closing the valve remotely through the app.
                   </p>
                 </div>
               </div>
@@ -52,10 +52,10 @@ const Service = () => {
                   <i className='fas fa-fist-raised' />
                 </div>
                 <div className='service-body'>
-                  <h5 className='service-title'>Risk Management</h5>
+                  <h5 className='service-title'>Proactive Protection</h5>
                   <p className='service-description'>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid
+                  The best way to avoid water damage is to prevent it, and daily health tests automatically monitor your home to detect water leaks of all sizes. Once your device understands your water use, it can catch hidden 
+                  leaks as small as a single drop per minute to protect your home and peace of mind.
                   </p>
                 </div>
               </div>
@@ -66,10 +66,9 @@ const Service = () => {
                   <i className='far fa-paper-plane' />
                 </div>
                 <div className='service-body'>
-                  <h5 className='service-title'>Market Research</h5>
+                  <h5 className='service-title'>Real-Time Alerts</h5>
                   <p className='service-description'>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid
+                  Receive real-time alerts via the app, texts or even a phone call when your device detects a leak, low temperatures or a running fixture.
                   </p>
                 </div>
               </div>
@@ -80,10 +79,10 @@ const Service = () => {
                   <i className='fas fa-gem' />
                 </div>
                 <div className='service-body'>
-                  <h5 className='service-title'>Business Financing</h5>
+                  <h5 className='service-title'>Conservation Goals</h5>
                   <p className='service-description'>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid
+                  View your daily water consumption in the Moen Smart 
+                  Water App to understand your water usage and set conservation goals to encourage water savings.
                   </p>
                 </div>
               </div>
@@ -104,22 +103,22 @@ const Service = () => {
             </div>
           </div>
           <div className="flex flex-col items-center py-20 text-center bg-white bg-opacity-0">
-      <h3 className="custom-color fw-bold mb-5">
-        How It Works
-        <br />
-      </h3>
-      <div className="mt-20 text-4xl font-medium text-black max-md:mt-10 max-md:max-w-full mb-4">
-        The Sabib Water Monitor and Shutoff is installed on your home’s main
-        water supply line to proactively provide leak detection for your whole
-        home.
+            <h3 className="custom-color fw-bold mb-5 pt-5">
+              How It Works
+              <br />
+            </h3>
+            <div className="mt-20 text-4xl font-medium text-black max-md:mt-10 max-md:max-w-full mb-4">
+              The Sabib Water Monitor and Shutoff is installed on your home’s main
+              water supply line to proactively provide leak detection for your whole
+              home.
+            </div>
+            <img
+              src={how} alt='how it works'
+              className="w-100"
+            />
+          </div>
+        </div>
       </div>
-      <img
-          src={how} alt='how it works'      
-        className="w-100"
-      />
-    </div>
-        </div>
-        </div>
     </Section>
   );
 };

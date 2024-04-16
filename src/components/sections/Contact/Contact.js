@@ -19,24 +19,24 @@ const contact = () => {
         <div className='section-content'>
           <div className='row'>
             <div className='col-md-9 col-lg-7'>
-              <form>
-                <div className='form-group'>
+              <form >
+                <div className='form-group pb-3'>
                   <input
                     type='text'
                     className='form-control rounded-0'
                     aria-describedby='emailHelp'
-                    placeholder='Enter Name...'
+                    placeholder='Name'
                   />
                 </div>
-                <div className='form-group'>
+                <div className='form-group pb-3'>
                   <input
                     type='email'
                     className='form-control rounded-0'
                     aria-describedby='emailHelp'
-                    placeholder='Enter email...'
+                    placeholder='Email'
                   />
                 </div>
-                <div className='form-group'>
+                <div className='form-group pb-3'>
                   <textarea
                     className='form-control rounded-0'
                     rows='5'

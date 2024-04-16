@@ -1,44 +1,52 @@
 import React from 'react';
-
 import Section from '../../../HOC/Section';
-import bgImage from '../../../assets/img/facts_bg.jpg';
+import smartSprinkler from '../../../assets/img/smartSprinkler.png';
+import { fontWeight } from '@mui/system';
 
 const Facts = () => {
+  const containerStyle = {
+    background: 'linear-gradient(180deg, #0A8EBF 0%, #054259 100%)',
+    color: 'white',
+    fontWeight: 'bold',
+    paddingTop: '1.5rem',
+    paddingBottom: '1.5rem', 
+  };
+
+  const imgStyle = {
+    marginBottom: '-24px', 
+  };
+
+  const headingStyle = {
+    fontSize: '3rem',
+    fontWeight: 'bold'
+  };
+
+  const leadStyle = {
+    fontSize: '1.25rem', 
+  };
+
   return (
-    <Section id='facts'>
-      <div
-        className='facts-container'
-        style={{ backgroundImage: `url(${bgImage})` }}
-      >
-        <div className='container pt-5 pb-4'>
-          <div className='row'>
-            <div className='col-sm-6 col-md-3 text-center mb-4'>
-              <div className='mb-2 facts-icon'>
-                <i className='fas fa-users' />
-              </div>
-              <h4 className='facts-counter text-light'>780</h4>
-              <h5 className='facts-title text-light'>Active Members</h5>
-            </div>
-            <div className='col-sm-6 col-md-3 text-center mb-4'>
-              <div className='mb-2 facts-icon'>
-                <i className='fas fa-grin-beam' />
-              </div>
-              <h4 className='facts-counter text-light'>1004</h4>
-              <h5 className='facts-title text-light'>Happy Clients</h5>
-            </div>
-            <div className='col-sm-6 col-md-3 text-center mb-4'>
-              <div className='mb-2 facts-icon'>
-                <i className='fas fa-project-diagram' />
-              </div>
-              <h4 className='facts-counter text-light'>2850</h4>
-              <h5 className='facts-title text-light'>Total Projects</h5>
-            </div>
-            <div className='col-sm-6 col-md-3 text-center mb-4'>
-              <div className='mb-2 facts-icon'>
-                <i className='fas fa-trophy' />
-              </div>
-              <h4 className='facts-counter text-light'>56</h4>
-              <h5 className='facts-title text-light'>Awards</h5>
+    <Section>
+      <div className="container-fluid" style={containerStyle}>
+        <div className="row justify-content-between align-items-start">
+          <div className="col-lg-6 mt-3">
+            <img
+              src={smartSprinkler}
+              alt="Background Image"
+              className="img-fluid"
+              style={imgStyle}
+            />
+          </div>
+          <div className="col-lg-6">
+            <div className="text-lg-start">
+              <h1 style={headingStyle}>SABIB</h1> 
+              <p className="lead" style={leadStyle}>Save Today Secure Tomorrow</p> 
+              <h1>The Home's First Smart Water Network</h1> 
+              <p className="mt-3 lead">
+                With the Smart Water Network, you can now have complete control of
+                the water both inside and outside of your home.
+              </p>
+              <button className="btn btn-light mt-3">Learn More</button> 
             </div>
           </div>
         </div>
