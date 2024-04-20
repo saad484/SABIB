@@ -4,6 +4,7 @@ import Header from './components/UI/Header/Header';
 import Sections from './components/sections/Sections';
 import Footer from './components/UI/Footer/Footer';
 
+
 function App() {
   return (
     <div className="App">

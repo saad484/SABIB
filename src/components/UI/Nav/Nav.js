@@ -1,7 +1,8 @@
+// Nav.js
 import React, { useState, useEffect } from 'react';
+import Logo from '../../../assets/img/sabib.png';
+import './Nav.css';
 import Link from '../Link/Link';
-import Logo from '../../../assets/img/sabib.png'; 
-import './Nav.css'; 
 
 const Nav = () => {
   const [navClass, setNavClass] = useState('');
@@ -27,9 +28,9 @@ const Nav = () => {
   return (
     <nav className={`navbar navbar-expand-md navbar-light bg-light ${navClass}`}>
       <div className='container'>
-        <a className='navbar-brand' href='/'>
-          <img src={Logo} className='logo-img' alt='logo' /> {/* Apply custom CSS class for logo */}
-        </a>
+        <Link to='/' isExternal={false} classes='navbar-brand'>
+          <img src={Logo} className='logo-img' alt='logo' />
+        </Link>
         <button
           className={`navbar-toggler ${toggledNav ? 'collapsed' : ''}`}
           type='button'
@@ -43,32 +44,32 @@ const Nav = () => {
         <div className={`collapse navbar-collapse ${toggledNav ? 'show' : ''}`}>
           <ul className='navbar-nav ms-auto'>
             <li className='nav-item'>
-              <Link target='home' offset={-120} classes='nav-link'>
+              <Link to='home' classes='nav-link'>
                 Home
               </Link>
             </li>
             <li className='nav-item'>
-              <Link target='about' classes='nav-link'>
+              <Link to='about' classes='nav-link'>
                 About
               </Link>
             </li>
             <li className='nav-item'>
-              <Link target='services' classes='nav-link'>
+              <Link to='services' classes='nav-link'>
                 Services
               </Link>
             </li>
             <li className='nav-item'>
-              <Link target='blog' classes='nav-link'>
+              <Link to='blog' classes='nav-link'>
                 Blog
               </Link>
             </li>
             <li className='nav-item'>
-              <Link target='contact' classes='nav-link'>
+              <Link to='contact' classes='nav-link'>
                 Contact
               </Link>
             </li>
             <li className='nav-item'>
-              <Link target='Login' classes='nav-link'>
+              <Link to='/login' isExternal={true} classes='nav-link'>
                 Login
               </Link>
             </li>

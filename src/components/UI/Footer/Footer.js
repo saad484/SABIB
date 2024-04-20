@@ -84,7 +84,7 @@ const footer = () => {
                 <small>Phone : +213 (0) 666 666 666</small>
               </p>
               <p className='text-muted'>
-                <small>E-mail : contact@email.com</small>
+                <small>E-mail : sabib@email.com</small>
               </p>
               <div className='social-media mt-4'>
                 <a href='!#' className='text-light'>
