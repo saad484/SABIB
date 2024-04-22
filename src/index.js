@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/main.scss';
@@ -18,14 +18,30 @@ if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key");
 }
 
+
+const AuthenticatedRoute = ({ element }) => {
+  const { signedIn } = useUser();
+
+  if (!signedIn) {
+    // Redirect to login if user is not signed in
+    return <Navigate to="/login" replace />;
+  }
+
+  // If user is signed in, render the requested element (e.g., <Dashboard />)
+  return element;
+};
+
+
 const ClerkWithRoutes = () => {
   return (
+
     <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
+
       </Routes>
     </ClerkProvider>
   );
