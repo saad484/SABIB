@@ -7,7 +7,6 @@ import reportWebVitals from './reportWebVitals';
 
 import { ClerkProvider, SignedIn, SignedOut, UserButton, useUser } from '@clerk/clerk-react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-
 import Dashboard from './components/dashboard/Dashboard';
 import Login from './components/auth/Login';
 import Signup from './components/auth/Signup';
@@ -23,11 +22,9 @@ const AuthenticatedRoute = ({ element }) => {
   const { signedIn } = useUser();
 
   if (!signedIn) {
-    // Redirect to login if user is not signed in
     return <Navigate to="/login" replace />;
   }
 
-  // If user is signed in, render the requested element (e.g., <Dashboard />)
   return element;
 };
 
@@ -40,7 +37,7 @@ const ClerkWithRoutes = () => {
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<AuthenticatedRoute element ={<Dashboard />}/>} />
 
       </Routes>
     </ClerkProvider>

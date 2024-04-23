@@ -3,7 +3,6 @@ import Section from '../../../HOC/Section';
 import Link from '../../UI/Link/Link';
 import bgVideo from '../../../assets/videos/faststart.mp4';
 import './Home.css'; 
-
 const Home = () => {
   return (
     <Section id='home'>
