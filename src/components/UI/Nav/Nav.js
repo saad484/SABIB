@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Logo from '../../../assets/img/sabib.png';
 import './Nav.css';
 import Link from '../Link/Link';
+import { UserButton } from '@clerk/clerk-react';
 
 const Nav = () => {
   const [navClass, setNavClass] = useState('');
@@ -74,6 +75,7 @@ const Nav = () => {
               </Link>
             </li>
           </ul>
+          <UserButton/>
         </div>
       </div>
     </nav>
