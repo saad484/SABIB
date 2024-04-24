@@ -1,15 +1,17 @@
-import { UserButton } from '@clerk/clerk-react'
-import React from 'react'
-import Starter from '../UI/Dashboard/Starter'
-import FullLayout from '../UI/Dashboard/FullLayout';
+// Dashboard.jsx
+
+import React from 'react';
+import { useRoutes } from 'react-router-dom';
+import ThemeRoutes from '../dashboard/routes/Router';
+import "../../assets/scss/style.scss";
+
+
 
 function Dashboard() {
-  return (
-    <div>
-        <FullLayout />
-        <Starter />
-    </div>
-  )
+  const routing = useRoutes(ThemeRoutes);
+
+
+  return <div className="dark">{routing}</div>;
 }
 
-export default Dashboard
+export default Dashboard;

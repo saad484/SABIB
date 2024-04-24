@@ -1,24 +1,26 @@
-import { Outlet } from "react-router-dom";
-import Sidebar from "./Sidebar";
-import Header from "./Header";
-import { Container } from "reactstrap";
+// FullLayout.js
+
+import React from 'react';
+import Sidebar from './Sidebar';
+import Header from './Header';
+import { Container } from 'reactstrap';
+import { Outlet } from 'react-router-dom';
 
 const FullLayout = () => {
   return (
     <main>
       <div className="pageWrapper d-lg-flex">
-        {/********Sidebar**********/}
+        {/* Sidebar */}
         <aside className="sidebarArea shadow" id="sidebarArea">
           <Sidebar />
         </aside>
-        {/********Content Area**********/}
-
+        {/* Content Area */}
         <div className="contentArea">
-          {/********header**********/}
+          {/* Header */}
           <Header />
-          {/********Middle Content**********/}
+          {/* Middle Content */}
           <Container className="p-4 wrapper" fluid>
-            <Outlet />
+            <Outlet /> {/* Renders nested routes */}
           </Container>
         </div>
       </div>

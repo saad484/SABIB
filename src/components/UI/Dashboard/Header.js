@@ -13,7 +13,7 @@ import {
   Dropdown,
   Button,
 } from "reactstrap";
-import { ReactComponent as LogoWhite } from "../../../assets/images/logos/xtremelogowhite.svg";
+import Logo from "../../../assets/img/sabib.png"; // Import your logo image
 import user1 from "../../../assets/images/users/user1.jpg";
 
 const Header = () => {
@@ -27,11 +27,13 @@ const Header = () => {
   const showMobilemenu = () => {
     document.getElementById("sidebarArea").classList.toggle("showSidebar");
   };
+
   return (
     <Navbar color="primary" dark expand="md">
       <div className="d-flex align-items-center">
+        {/* Replace NavbarBrand with your logo image */}
         <NavbarBrand href="/" className="d-lg-none">
-          <LogoWhite />
+          <img src={Logo} alt="Logo" style={{ width: "40px" }} /> {/* Adjust width as needed */}
         </NavbarBrand>
         <Button
           color="primary"
@@ -59,12 +61,12 @@ const Header = () => {
       <Collapse navbar isOpen={isOpen}>
         <Nav className="me-auto" navbar>
           <NavItem>
-            <Link to="/starter" className="nav-link">
+            <Link to="starter" className="nav-link">
               Starter
             </Link>
           </NavItem>
           <NavItem>
-            <Link to="/about" className="nav-link">
+            <Link to="about" className="nav-link">
               About
             </Link>
           </NavItem>

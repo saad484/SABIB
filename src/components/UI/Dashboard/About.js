@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, CardTitle, Button, CardSubtitle, Card } from 'reactstrap';
-import ComponentCard from '../components/ComponentCard';
+import ComponentCard from '../../ComponentCard';
 
 
 const About = () => {
