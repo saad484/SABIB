@@ -11,40 +11,28 @@ import {
 
 const FeedData = [
   {
-    title: "Cras justo odio",
-    icon: "bi bi-bell",
-    color: "primary",
-    date: "6 minute ago",
-  },
-  {
-    title: "New user registered.",
-    icon: "bi bi-person",
-    color: "info",
-    date: "6 minute ago",
-  },
-  {
-    title: "Server #1 overloaded.",
-    icon: "bi bi-hdd",
+    title: "Flow Rate Alert",
+    icon: "bi bi-speedometer2",
     color: "danger",
-    date: "6 minute ago",
+    date: "6 minutes ago",
   },
   {
-    title: "New order received.",
-    icon: "bi bi-bag-check",
-    color: "success",
-    date: "6 minute ago",
-  },
-  {
-    title: "Cras justo odio",
-    icon: "bi bi-bell",
-    color: "dark",
-    date: "6 minute ago",
-  },
-  {
-    title: "Server #1 overloaded.",
-    icon: "bi bi-hdd",
+    title: "Low Water Pressure Detected",
+    icon: "bi bi-bar-chart-line",
     color: "warning",
-    date: "6 minute ago",
+    date: "12 minutes ago",
+  },
+  {
+    title: "High Water Usage Recorded",
+    icon: "bi bi-droplet",
+    color: "info",
+    date: "18 minutes ago",
+  },
+  {
+    title: "Leak Detected",
+    icon: "bi bi-exclamation-triangle",
+    color: "danger",
+    date: "25 minutes ago",
   },
 ];
 
@@ -52,9 +40,9 @@ const Feeds = () => {
   return (
     <Card>
       <CardBody>
-        <CardTitle tag="h5">Feeds</CardTitle>
+        <CardTitle tag="h5">System Alerts</CardTitle>
         <CardSubtitle className="mb-2 text-muted" tag="h6">
-          Widget you can use
+          Real-time Notifications
         </CardSubtitle>
         <ListGroup flush className="mt-4">
           {FeedData.map((feed, index) => (

@@ -75,9 +75,12 @@ const Nav = () => {
               </Link>
             </li>
           </ul>
-          <UserButton/>
+          <UserButton />
+
         </div>
+
       </div>
+      
     </nav>
   );
 };

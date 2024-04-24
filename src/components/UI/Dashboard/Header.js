@@ -14,7 +14,7 @@ import {
   Button,
 } from "reactstrap";
 import Logo from "../../../assets/img/sabib.png"; // Import your logo image
-import user1 from "../../../assets/images/users/user1.jpg";
+import { UserButton } from "@clerk/clerk-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -29,14 +29,14 @@ const Header = () => {
   };
 
   return (
-    <Navbar color="primary" dark expand="md">
+    <Navbar color="info" dark expand="md">
       <div className="d-flex align-items-center">
         {/* Replace NavbarBrand with your logo image */}
         <NavbarBrand href="/" className="d-lg-none">
           <img src={Logo} alt="Logo" style={{ width: "40px" }} /> {/* Adjust width as needed */}
         </NavbarBrand>
         <Button
-          color="primary"
+          color="info"
           className="d-lg-none"
           onClick={() => showMobilemenu()}
         >
@@ -45,7 +45,7 @@ const Header = () => {
       </div>
       <div className="hstack gap-2">
         <Button
-          color="primary"
+          color="info"
           size="sm"
           className="d-sm-block d-md-none"
           onClick={Handletoggle}
@@ -82,25 +82,7 @@ const Header = () => {
             </DropdownMenu>
           </UncontrolledDropdown>
         </Nav>
-        <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-          <DropdownToggle color="primary">
-            <img
-              src={user1}
-              alt="profile"
-              className="rounded-circle"
-              width="30"
-            ></img>
-          </DropdownToggle>
-          <DropdownMenu>
-            <DropdownItem header>Info</DropdownItem>
-            <DropdownItem>My Account</DropdownItem>
-            <DropdownItem>Edit Profile</DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>My Balance</DropdownItem>
-            <DropdownItem>Inbox</DropdownItem>
-            <DropdownItem>Logout</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
+        <UserButton />
       </Collapse>
     </Navbar>
   );
