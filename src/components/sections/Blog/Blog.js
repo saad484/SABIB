@@ -7,7 +7,7 @@ import blogImage2 from '../../../assets/img/blog2.jpg';
 import blogImage3 from '../../../assets/img/blog3.jpg';
 import prec90 from '../../../assets/img/per90.gif';
 import prec60 from '../../../assets/img/per60.gif';
- 
+import Blog4 from '../../../assets/img/blog4.png'; 
 
 const Blog = () => {
   return (
@@ -85,14 +85,45 @@ const Blog = () => {
     </div>
   </div>
 </div>
-    </div>
+    
     <div className="d-flex justify-content-around">
     <img src={prec90} className="percImg mb-5" alt="90% Reduction" />
     <img src={prec60} className="percImg mb-5" alt="60% Reduction" />
   </div>
 
         </div>
+        </div>
+        <div className='row pt-5 mt-5 bg-white'>
+            <div className='col-lg-6 mb-3'>
+              {/* Image */}
+              <img src={Blog4} className='card-img-top' alt='Blog Image' />
+            </div>
+            <div className='col-lg-6 mb-3'>
+              {/* Text and Button */}
+              <div className='text-left'>
+                <h2 className='text-info'>Real-Time Insight & Water Monitoring Mastery with Sabib</h2>
+                <p className='fw-bold'>Sabib's technology can help organizations and communities make informed decisions about water management, conservation, and sustainability.</p>
+                <button className='btn btn-primary rounded-0'>Read More</button>
+              </div>
+            </div>
+          </div>
+          <div className='row pt-5 mt-0 bg-white'>
+            
+            <div className='col-lg-6 mb-3'>
+              {/* Text and Button */}
+              <div className='text-left'>
+                <h2 className='text-info'>Real-Time Insight & Water Monitoring Mastery with Sabib</h2>
+                <p className='fw-bold'>Sabib's technology can help organizations and communities make informed decisions about water management, conservation, and sustainability.</p>
+                <button className='btn btn-primary rounded-0'>Read More</button>
+              </div>
+            </div>
+            <div className='col-lg-6 mb-3'>
+              {/* Image */}
+              <img src={Blog4} className='card-img-top' alt='Blog Image' />
+            </div>
+          </div>
       </div>
+      
     </Section>
   );
 };

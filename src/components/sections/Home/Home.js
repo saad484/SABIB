@@ -14,14 +14,14 @@ const Home = () => {
         <div className='content-overlay '>
           <div className='home-content p-5 text-center text-light m-5'>
             <h1 className='title'>Stay One Step Ahead of Water Damage</h1>
-            <div className='p-5 position-relative z-index-1'>
-              <Link target='about' classes='btn btn-primary rounded-0 mr-2'>
+            <div className='p-0 position-relative z-index-1'>
+            <Link target='about' classes='btn btn-primary rounded-0 mr-2' >
                 Learn More
               </Link>
-              <Link target='contact' classes='btn btn-light text-dark rounded-0'>
+              <Link target='contact' classes='btn btn-light text-dark rounded-0' >
                 Contact Us
               </Link>
-            </div>
+    </div>
           </div>
         </div>
       </div>

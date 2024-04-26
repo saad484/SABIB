@@ -23,10 +23,42 @@
     display: flex;
     justify-content: center;
     
-    
   }
   
   .home-content {
     z-index: 1; 
   }
-  
+  .title{
+    
+    /* position: relative; */
+  }
+
+  .title {
+  color: hsl(0, 0%, 100%);
+  font-size: 39px!important;
+  font-weight: bold!important;
+  font-family: monospace;
+  letter-spacing: 5px!important;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.title {
+  padding: 64px;
+  background: linear-gradient(to right, hsl(0, 0%, 100%) 0, hsl(0, 0%, 30%) 15%,hsl(0, 0%, 50%) 20%, hsl(0, 0%, 100%) 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s infinite ease-in-out; /* Changed timing function to ease-in-out */
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}

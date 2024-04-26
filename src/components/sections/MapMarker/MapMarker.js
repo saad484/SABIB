@@ -7,7 +7,7 @@ const mapMarker = () => {
       <div>
         <iframe
           title='mapMarker'
-          src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5228.920740765038!2d3.132905187706868!3d36.668746379720325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e521f646e1edb%3A0x35c0e93b4118c15d!2sAlgiers+Province!5e0!3m2!1sen!2sdz!4v1562949559272!5m2!1sen!2sdz'
+          src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.131654315704!2d-9.532903324561211!3d30.40400637474445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3c833de96eea5%3A0x5a539c7b2017bc32!2sUniversiapolis%20-%20Universit%C3%A9%20Internationale%20d&#39;Agadir!5e0!3m2!1sfr!2sma!4v1714162937248!5m2!1sfr!2sma'
           width='100%'
           height='450'
           frameBorder='0'

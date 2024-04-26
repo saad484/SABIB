@@ -12,7 +12,7 @@ const TopBar = () => {
           </div>
           <div className='icon-container'>
             <i className='fas fa-envelope' />
-            <small>sabib@gmail.com</small>
+            <small>sabib.business@gmail.com</small>
           </div>
         </div>
         <div className='top-bar-content'>
