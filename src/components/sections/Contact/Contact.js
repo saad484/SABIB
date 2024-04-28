@@ -19,10 +19,11 @@ const contact = () => {
         <div className='section-content'>
           <div className='row'>
             <div className='col-md-9 col-lg-7'>
-              <form >
+              <form action='https://formsubmit.co/sabib.team@gmail.com' method='POST'>
                 <div className='form-group pb-3'>
                   <input
                     type='text'
+                    name='name'
                     className='form-control rounded-0'
                     aria-describedby='emailHelp'
                     placeholder='Name'
@@ -31,6 +32,7 @@ const contact = () => {
                 <div className='form-group pb-3'>
                   <input
                     type='email'
+                    name='email'
                     className='form-control rounded-0'
                     aria-describedby='emailHelp'
                     placeholder='Email'
@@ -38,6 +40,7 @@ const contact = () => {
                 </div>
                 <div className='form-group pb-3'>
                   <textarea
+                  name='message'
                     className='form-control rounded-0'
                     rows='5'
                     placeholder='Enter Message...'

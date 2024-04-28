@@ -32,21 +32,21 @@ const footer = () => {
             <div className='footer-content'>
               <ul className='list-group quick-links'>
                 <li>
-                  <Link target='home' offset={-120}>
+                  <Link target='home' to='home' offset={-120}>
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link target='about'>About</Link>
+                  <Link target='about' to="about">About</Link>
                 </li>
                 <li>
-                  <Link target='services'>Services</Link>
+                  <Link target='services' to='services'>Services</Link>
                 </li>
                 <li>
-                  <Link target='blog'>Blog</Link>
+                  <Link target='blog' to='blog'>Blog</Link>
                 </li>
                 <li>
-                  <Link target='contact'>Contact</Link>
+                  <Link target='contact' to='contact'>Contact</Link>
                 </li>
               </ul>
             </div>
@@ -78,13 +78,13 @@ const footer = () => {
             </div>
             <div className='footer-content'>
               <p className='text-muted'>
-                <small>Address : 123 main street, Agadir, Morocco</small>
+                <small>Address : Universiapolis - Salon Feecra</small>
               </p>
               <p className='text-muted'>
-                <small>Phone : +213 (0) 666 666 666</small>
+                <small>Phone : +213 (0) 637765253</small>
               </p>
               <p className='text-muted'>
-                <small>E-mail : sabib.business@gmail.com</small>
+                <small>E-mail : sabib.team@gmail.com</small>
               </p>
               <div className='social-media mt-4'>
                 <a href='!#' className='text-light'>

@@ -7,12 +7,12 @@ const TopBar = () => {
       <div className='container top-bar-container'>
         <div className='top-bar-content'>
           <div className='icon-container'>
-            <i className='fas fa-phone-alt' />
-            <small>+212 (0) 666 666 666</small>
+            <i className='fas fa-phone-alt m-2'/>
+            <small>+212 (0) 637765253</small>
           </div>
           <div className='icon-container'>
-            <i className='fas fa-envelope' />
-            <small>sabib.business@gmail.com</small>
+            <i className='fas fa-envelope m-2' />
+            <small>sabib.team@gmail.com</small>
           </div>
         </div>
         <div className='top-bar-content'>

@@ -19,9 +19,9 @@ const Service = () => {
         <div className='section-content'>
           <div className='row'>
             <div className='col-md-6 col-lg-4 mb-3'>
-              <div className='service-box d-flex'>
+              <div className='service-box d-flex h-100'>
                 <div className='service-icon mr-4'>
-                  <i className='fas fa-briefcase' />
+                  <i className='fas fa-tachometer-alt' />
                 </div>
                 <div className='service-body'>
                   <h5 className='service-title'>24/7 Leak Detection</h5>
@@ -33,9 +33,9 @@ const Service = () => {
               </div>
             </div>
             <div className='col-md-6 col-lg-4 mb-3'>
-              <div className='service-box d-flex'>
+              <div className='service-box d-flex h-100'>
                 <div className='service-icon mr-4'>
-                  <i className='fas fa-chart-bar' />
+                  <i className='fas fa-power-off' />
                 </div>
                 <div className='service-body'>
                   <h5 className='service-title'>Automatic Shutoff</h5>
@@ -47,9 +47,9 @@ const Service = () => {
               </div>
             </div>
             <div className='col-md-6 col-lg-4 mb-3'>
-              <div className='service-box d-flex'>
+              <div className='service-box d-flex h-100'>
                 <div className='service-icon mr-4'>
-                  <i className='fas fa-fist-raised' />
+                  <i className='fas fa-shield-alt' />
                 </div>
                 <div className='service-body'>
                   <h5 className='service-title'>Proactive Protection</h5>
@@ -61,9 +61,9 @@ const Service = () => {
               </div>
             </div>
             <div className='col-md-6 col-lg-4 mb-3'>
-              <div className='service-box d-flex'>
+              <div className='service-box d-flex h-100'>
                 <div className='service-icon mr-4'>
-                  <i className='far fa-paper-plane' />
+                  <i className='fas fa-bell' />
                 </div>
                 <div className='service-body'>
                   <h5 className='service-title'>Real-Time Alerts</h5>
@@ -74,9 +74,9 @@ const Service = () => {
               </div>
             </div>
             <div className='col-md-6 col-lg-4 mb-3'>
-              <div className='service-box d-flex'>
+              <div className='service-box d-flex h-100'>
                 <div className='service-icon mr-4'>
-                  <i className='fas fa-gem' />
+                  <i className='fas fa-chart-line' />
                 </div>
                 <div className='service-body'>
                   <h5 className='service-title'>Conservation Goals</h5>
@@ -88,15 +88,17 @@ const Service = () => {
               </div>
             </div>
             <div className='col-md-6 col-lg-4 mb-3'>
-              <div className='service-box d-flex'>
+              <div className='service-box d-flex h-100'>
                 <div className='service-icon mr-4'>
-                  <i className='far fa-life-ring' />
+                  <i className='fas fa-headset' />
                 </div>
                 <div className='service-body'>
                   <h5 className='service-title'>Suppport Team</h5>
                   <p className='service-description'>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid
+                  Our dedicated support team is here 24/7 to assist you with any questions or concerns you may have. 
+                  Whether it's troubleshooting technical issues or providing guidance on maximizing the benefits of your smart water system, 
+                  our knowledgeable team is just a call or message away.
+
                   </p>
                 </div>
               </div>

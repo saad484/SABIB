@@ -62,12 +62,12 @@ const Header = () => {
         <Nav className="me-auto" navbar>
           <NavItem>
             <Link to="starter" className="nav-link">
-              Starter
+              Dashboard
             </Link>
           </NavItem>
           <NavItem>
-            <Link to="about" className="nav-link">
-              About
+            <Link to="/" className="nav-link">
+              Home
             </Link>
           </NavItem>
           <UncontrolledDropdown inNavbar nav>
