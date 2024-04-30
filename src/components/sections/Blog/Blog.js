@@ -110,7 +110,7 @@ const Blog = () => {
               <div className='text-left'>
                 <h2 className='text-info'>Real-Time Insight & Water Monitoring Mastery with Sabib</h2>
                 <p className='fw-bold'>Sabib's technology can help organizations and communities make informed decisions about water management, conservation, and sustainability.</p>
-                <Link to='contact' classes='btn btn-primary text-light rounded-0' >Read More</Link>
+                <Link classes='btn btn-primary text-light rounded-0' >Read More</Link>
               </div>
             </div>
             <div className='col-lg-6 mb-3'>

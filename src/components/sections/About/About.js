@@ -1,10 +1,8 @@
 import React from 'react';
-
 import Section from '../../../HOC/Section';
-import aboutImage from '../../../assets/img/about.jpg';
 import device from '../../../assets/img/device.png';
-import { width } from '@mui/system';
 import Link from '../../UI/Link/Link';
+
 
 
 const about = () => {
@@ -16,7 +14,6 @@ const about = () => {
             <span>Our </span>Company
           </h3>
         </div>
-
         <div className='section-content'>
           <div className='row align-items-center'>
             <div className='col-md-12 col-lg-6 order-2 order-lg-1'>
@@ -34,16 +31,13 @@ const about = () => {
                   </Link>
               </div>
             </div>
-
             <div className='col-md-12 col-lg-6 order-2 order-lg-2 text-center'>
               <img src={device} alt='sabib device' className='img-fluid aboutImg' style={{ maxWidth: '40%' }} />
             </div>
           </div>
         </div>
-
       </div>
     </Section>
   );
 };
-
 export default about;

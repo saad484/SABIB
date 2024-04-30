@@ -2,6 +2,7 @@ import React from 'react';
 import Section from '../../../HOC/Section';
 import smartSprinkler from '../../../assets/img/smartSprinkler.png';
 import { fontWeight } from '@mui/system';
+import Link from '../../UI/Link/Link';
 
 const Facts = () => {
   const containerStyle = {
@@ -46,7 +47,7 @@ const Facts = () => {
                 With the Smart Water Network, you can now have complete control of
                 the water both inside and outside of your home.
               </p>
-              <button className="btn btn-light mt-3">Learn More</button> 
+              <Link  to="contact" classes="btn btn-light dark-text mt-3">Learn More</Link> 
             </div>
           </div>
         </div>
