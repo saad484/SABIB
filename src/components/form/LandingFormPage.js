@@ -1,12 +1,17 @@
 import React, { useContext } from "react";
 import PaginateBar from "./PaginateBar";
 import classes from "./css/LandingFormPage.module.css";
-import UserNameForm from "./UserNameForm";
-import WorkspaceForm from "./WorkspaceForm";
-import UsageForm from "./UsageForm";
+import TypeOfLocation from "./TypeOfLocation";
 import CongratzPage from "./CongratzPage";
 import FormContext from "../form/store/form-context";
 import './css/global.css';
+import UsagePage from "./UsagePage";
+import NicknamePage from "./NicknamePage";
+import LocationAddressPage from "./LocationAddressPage";
+import LocationSizePage from "./LocationSizePage";
+import FloorsAndBathroomsPage from "./FloorsAndBathroomsPage";
+import ApplianceAndAmenitiesPage from "./ApplianceAndAmenitiesPage";
+import PeopleCountPage from "./PeopleCountPage";
 
 function LandingFormPage() {
   const {
@@ -16,24 +21,24 @@ function LandingFormPage() {
     formData,
     setFinalData,
     resetDataState,
-    validate,
     validation,
+    validate,
   } = useContext(FormContext);
 
-  
-  const pageSet = () => {
-    if (page < numOfPages - 1) {              // jump to next page
-      setCurrentPage(page + 1);
-    } else if (page === numOfPages - 1) {     // checks if in 2nd last page, all the mandatory fields are filled or not
-      if (validate(validation)) {
+  const handleNextClick = () => {
+    // Check if the current page's data is valid
+    if (validate(validation)) {
+      // Proceed to the next page if the data is valid
+      if (page < numOfPages - 1) {
         setCurrentPage(page + 1);
-      } else {
-        alert("Your form is incomplete");
+      } else if (page === numOfPages - 1) {
+        setFinalData((current) => [...current, formData]);
+        resetDataState();
+        setCurrentPage(1);
       }
-    } else if (page === numOfPages) {         // if we are already in the last page, set the collected data into a new state and reset the form to default.
-      setFinalData(current => [...current, formData]);
-      resetDataState();
-      setCurrentPage(1);
+    } else {
+      // Display an alert if the form is incomplete
+      alert("Your form is incomplete");
     }
   };
 
@@ -41,18 +46,23 @@ function LandingFormPage() {
     <div className={classes.form}>
       <PaginateBar />
       <div className="card-form">
-        {page === 1 && <UserNameForm />}
-        {page === 2 && <WorkspaceForm />}
-        {page === 3 && <UsageForm />}
-        {page === 4 && <CongratzPage />}
+        {page === 1 && <TypeOfLocation />}
+        {page === 2 && <UsagePage />}
+        {page === 3 && <NicknamePage />}
+        {page === 4 && <LocationAddressPage />}
+        {page === 5 && <LocationSizePage />}
+        {page === 6 && <FloorsAndBathroomsPage />}
+        {page === 7 && <ApplianceAndAmenitiesPage />}
+        {page === 8 && <PeopleCountPage />}
+        {page === 9 && <CongratzPage />}
         
-        <button className="button" onClick={pageSet}>
-        {page === numOfPages ? `Launch SABIB` : `Next`}
-      </button>
+        <button className="button" onClick={handleNextClick}>
+          {page === numOfPages ? `Launch SABIB` : `Next`}
+        </button>
       </div>
-
     </div>
   );
 }
+
 
 export default LandingFormPage;

@@ -3,10 +3,11 @@
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
-  gap: 10px;
+  /* gap: 10px; */
   cursor: pointer;
   height: 10vh;
-  padding-top: 12px;
+  /* padding-top: 12px; */
+  margin-top: 50px;
 }
 
 .logo {

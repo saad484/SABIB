@@ -16,7 +16,7 @@ function PaginateBar() {
       <div className={classes.buttonContainer}>
         {buttonEl}
       </div>
-      <progress className={classes.progressBar} max={100} value={page===1?'20':page===2?'50':page===3?'80':'100'}/>
+      <progress className={classes.progressBar} max={100} value={page===1?'10':page===2?'21':page===3?'33':page===4?'44':page===5?'56':page===6?'67':page===7?'79':page===8?'90':'100'}/>
     </div>
   )
 }

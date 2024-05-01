@@ -21,8 +21,8 @@
 
 .circularButton {
     position: relative;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     margin: 0;
     padding: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
