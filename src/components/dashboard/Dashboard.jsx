@@ -1,8 +1,8 @@
 // Dashboard.jsx
 
-import React from 'react';
-import { useRoutes } from 'react-router-dom';
-import ThemeRoutes from '../dashboard/routes/Router';
+import React from "react";
+import { useRoutes } from "react-router-dom";
+import ThemeRoutes from "../dashboard/routes/Router";
 import "../../assets/scss/style.scss";
 import LogoHeader from "../../components/form/LogoHeader";
 import LandingFormPage from "../../components/form/LandingFormPage";
