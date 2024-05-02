@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import classes from "./css/Form.module.css";
 import FormContext from "../form/store/form-context";
 
@@ -8,33 +8,69 @@ function LocationAddressPage() {
   const [region, setRegion] = useState("");
   const [postalCode, setPostalCode] = useState("");
 
-  const { formData, setFormData, setCurrentPage } = useContext(FormContext);
+  const { formData, setFormData, setCurrentPage, validation, setValidation } = useContext(FormContext);
+
+  // useEffect to set initial field values when component mounts
+  useEffect(() => {
+    setAddress(formData.address || "");
+    setCity(formData.city || "");
+    setRegion(formData.region || "");
+    setPostalCode(formData.postalCode || "");
+  }, []);
 
   const handleAddressChange = (event) => {
-    setAddress(event.target.value);
+    const value = event.target.value;
+    setAddress(value);
+    setFormData((prevData) => ({ ...prevData, address: value }));
+    validateForm();
   };
-
+  
   const handleCityChange = (event) => {
-    setCity(event.target.value);
+    const value = event.target.value;
+    setCity(value);
+    setFormData((prevData) => ({ ...prevData, city: value }));
+    validateForm();
   };
-
+  
   const handleRegionChange = (event) => {
-    setRegion(event.target.value);
+    const value = event.target.value;
+    setRegion(value);
+    setFormData((prevData) => ({ ...prevData, region: value }));
+    validateForm();
+  };
+  
+  const handlePostalCodeChange = (event) => {
+    const value = event.target.value;
+    setPostalCode(value);
+    setFormData((prevData) => ({ ...prevData, postalCode: value }));
+    validateForm();
   };
 
-  const handlePostalCodeChange = (event) => {
-    setPostalCode(event.target.value);
+  const validateForm = () => {
+    // Validate each field and update validation state
+    const isAddressValid = address.trim() !== "";
+    const isCityValid = city.trim() !== "";
+    const isRegionValid = region.trim() !== "";
+    const isPostalCodeValid = postalCode.trim() !== "";
+
+    setValidation({
+      ...validation,
+      address: isAddressValid,
+      city: isCityValid,
+      region: isRegionValid,
+      postalCode: isPostalCodeValid,
+    });
   };
 
   const handleNextClick = () => {
-    setCurrentPage(6); // Assuming 6 is the index of the next page
-    setFormData((prevData) => ({
-      ...prevData,
-      address,
-      city,
-      region,
-      postalCode,
-    }));
+    // Check if all fields are valid
+    if (validation.address && validation.city && validation.region && validation.postalCode) {
+      // Proceed to the next page
+      setCurrentPage(page => page + 1);
+    } else {
+      // Display an error message if any field is invalid
+      alert("Please fill out all fields.");
+    }
   };
 
   return (
@@ -46,11 +82,12 @@ function LocationAddressPage() {
         </label>
         <input
           type="text"
-          className="form-control"
+          className={`form-control ${validation.address === false ? "is-invalid" : ""}`}
           id="addressInput"
           value={address}
           onChange={handleAddressChange}
         />
+        {validation.address === false && <div className="invalid-feedback">Address should not be empty</div>}
       </div>
       <div className="mb-3">
         <label htmlFor="cityInput" className="form-label">
@@ -58,11 +95,12 @@ function LocationAddressPage() {
         </label>
         <input
           type="text"
-          className="form-control"
+          className={`form-control ${validation.city === false ? "is-invalid" : ""}`}
           id="cityInput"
           value={city}
           onChange={handleCityChange}
         />
+        {validation.city === false && <div className="invalid-feedback">City should not be empty</div>}
       </div>
       <div className="mb-3">
         <label htmlFor="regionInput" className="form-label">
@@ -70,12 +108,13 @@ function LocationAddressPage() {
         </label>
         <input
           list="morocco-regions"
-          className="form-control"
+          className={`form-control ${validation.region === false ? "is-invalid" : ""}`}
           name="region"
           value={region}
           onChange={handleRegionChange}
           placeholder="Type or select a region"
         />
+        {validation.region === false && <div className="invalid-feedback">Region should not be empty</div>}
         <datalist id="morocco-regions">
           <option value="Rabat-Salé-Kénitra" />
           <option value="Casablanca-Settat" />
@@ -96,14 +135,17 @@ function LocationAddressPage() {
           Postal Code
         </label>
         <input
-          type="text"
-          className="form-control"
+          type="number"
+          className={`form-control ${validation.postalCode === false ? "is-invalid" : ""}`}
           id="postalCodeInput"
           value={postalCode}
           onChange={handlePostalCodeChange}
         />
+        {validation.postalCode === false && <div className="invalid-feedback">Postal Code should not be empty</div>}
       </div>
-      
+      <button className="button" onClick={handleNextClick}>
+        Next
+      </button>    
     </div>
   );
 }

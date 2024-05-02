@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import classes from "./css/Form.module.css";
 import FormContext from "../form/store/form-context";
 import InputSlider from "react-input-slider";
@@ -18,15 +18,24 @@ function FloorsAndBathroomsPage() {
     setBathrooms(value);
   };
 
-  // Function to handle the click of the Next button
+  // Function to handle navigation to the next page
   const handleNextClick = () => {
+    // Update form data with selected number of floors and bathrooms
     setFormData((prevData) => ({
       ...prevData,
       floors: floors,
-      bathrooms: bathrooms,
+      bathrooms: bathrooms
     }));
-    setCurrentPage(8); // Assuming 8 is the index of the next page
+    // Proceed to the next page
+    setCurrentPage(page => page + 1);
   };
+
+  // Set the initial values of floors and bathrooms when the component mounts
+  useEffect(() => {
+    // Retrieve the floors and bathrooms values from formData and set them as the initial states
+    setFloors(formData.floors || 1);
+    setBathrooms(formData.bathrooms || 1);
+  }, []);
 
   return (
     <div className={classes.container}>
@@ -69,7 +78,9 @@ function FloorsAndBathroomsPage() {
         </div>
       </div>
 
-
+      <button className="button" onClick={handleNextClick}>
+        Next
+      </button>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import classes from "./css/Form.module.css";
 import FormContext from "../form/store/form-context";
 
@@ -17,12 +17,17 @@ function PeopleCountPage() {
   };
 
   const handleNextClick = () => {
-    setFormData((prevData) => ({
-      ...prevData,
-      peopleCount: peopleCount,
-    }));
-    setCurrentPage(12); // Assuming 12 is the index of the next page
+    // Update form data with selected people count
+    setFormData((prevData) => ({ ...prevData, peopleCount: peopleCount }));
+    // Proceed to the next page
+    setCurrentPage(page => page + 1);
   };
+
+  // Set the initial value of peopleCount when the component mounts
+  useEffect(() => {
+    // Retrieve the peopleCount value from formData and set it as the initial state
+    setPeopleCount(formData.peopleCount || 1);
+  }, []);
 
   return (
     <div className={classes.container}>
@@ -36,7 +41,9 @@ function PeopleCountPage() {
           +
         </button>
       </div>
-      
+      <button className="button" onClick={handleNextClick}>
+        Next
+      </button>
     </div>
   );
 }

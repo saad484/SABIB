@@ -30,12 +30,23 @@ function TypeOfLocation() {
     },
   ];
 
-  const { setFormData, formData, setValidation } = useContext(FormContext);
+  const { formData, setFormData, setCurrentPage } = useContext(FormContext);
 
   const insertType = (id) => {
     setFormData((prevData) => ({ ...prevData, type: id }));
-    setValidation((prevData) => ({ ...prevData, type: true }));
-    // console.log(id);
+  };
+
+  const handleNextClick = () => {
+    // Validate fields specific to this page, if necessary
+    // For example, check if a type is selected
+    if (!formData.type) {
+      // Display an error message or prevent navigation
+      alert("Please select a type of location.");
+      return; // Stop navigation
+    }
+
+    // Navigate to the next page
+    setCurrentPage((prevPage) => prevPage + 1);
   };
 
   return (
@@ -58,6 +69,10 @@ function TypeOfLocation() {
           </div>
         ))}
       </div>
+
+      <button className="button" onClick={handleNextClick}>
+        Next
+      </button>
     </>
   );
 }

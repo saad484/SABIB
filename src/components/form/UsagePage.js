@@ -10,12 +10,20 @@ function UsagePage() {
     { id: "other", label: "Other" },
   ];
 
-  const { formData, setFormData, setValidation } = useContext(FormContext);
+  const { formData, setFormData, setCurrentPage, validation, setValidation } = useContext(FormContext);
 
   const handleOptionSelect = (optionId) => {
     setFormData((prevData) => ({ ...prevData, usage: optionId }));
     setValidation((prevData) => ({ ...prevData, usage: true }));
-    
+  };
+
+  const handleNextClick = () => {
+    // Move to the next page if the selection is valid
+    if (validation.usage) {
+      setCurrentPage(page => page + 1);
+    } else {
+      alert("Please select an option to proceed.");
+    }
   };
 
   return (
@@ -41,6 +49,9 @@ function UsagePage() {
           </label>
         </div>
       ))}
+      <button className="button" onClick={handleNextClick}>
+        Next
+      </button>
     </div>
   );
 }

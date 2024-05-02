@@ -75,7 +75,7 @@ const Header = () => {
               DD Menu
             </DropdownToggle>
             <DropdownMenu end>
-              <DropdownItem>Option 1</DropdownItem>
+              <DropdownItem><Link to='add-house'>Add House</Link></DropdownItem>
               <DropdownItem>Option 2</DropdownItem>
               <DropdownItem divider />
               <DropdownItem>Reset</DropdownItem>

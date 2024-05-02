@@ -1,28 +1,27 @@
+// FormProvider.js
+
 import React, { useState } from "react";
 import FormContext from "./form-context";
 
 function FormProvider({ children }) {
   // Define default data and validation states for each page
   const defaultDataState = {
-    type: "",
-    usage: "", // Example field on TypeOfLocation page
-    nickname: "", // Example field on NicknamePage page
-    address: "", // Example field on LocationAddressPage page
-    city: "", // Example field on LocationAddressPage page
-    region: "", // Example field on LocationAddressPage page
-    postalCode: "", // Example field on LocationAddressPage page
-    size: "", // Example field on LocationSizePage page
-    floors: "", // Example field on FloorsAndBathroomsPage page
-    bathrooms: "", // Example field on FloorsAndBathroomsPage page
-    appliances: [], // Example field on ApplianceAndAmenitiesPage page
-    amenities: [], // Example field on ApplianceAndAmenitiesPage page
-    peopleCount: 0, // Example field on PeopleCountPage page
+    usage: "", // Add the "usage" field here
+    nickname: "",
+    address: "",
+    city: "",
+    region: "",
+    postalCode: "",
+    size: "",
+    floors: "",
+    bathrooms: "",
+    appliances: [],
+    amenities: [],
+    peopleCount: 0,
   };
 
   const defaultValidationState = {
-  
-    type: false,
-    usage: false,
+    usage: false, // Add the "usage" field here
     nickname: false,
     address: false,
     city: false,
@@ -42,7 +41,6 @@ function FormProvider({ children }) {
   const [validation, setValidation] = useState(defaultValidationState);
 
   const validate = (a) => Object.values(a).reduce((sum, next) => sum && next, true);
-
 
   const resetDataState = () => {
     setFormData(defaultDataState);

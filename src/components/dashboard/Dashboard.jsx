@@ -11,14 +11,13 @@ import FormProvider from "../form/store/FormProvider";
 function Dashboard() {
   const routing = useRoutes(ThemeRoutes);
 
-    return (
-    <FormProvider>
-    <div className="app">
-      <LogoHeader />
-      <LandingFormPage />
-    </div>
-  </FormProvider>);
-    //  <div className="dark">{routing}</div>);
+  //   return (<FormProvider>
+  //   <div className="app">
+  //     <LogoHeader />
+  //     <LandingFormPage />
+  //   </div>
+  // </FormProvider>);
+  return (<div className="dark">{routing}</div>);
 }
 
 export default Dashboard;

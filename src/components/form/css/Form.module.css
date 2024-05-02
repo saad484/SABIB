@@ -63,7 +63,7 @@
 }
 
 .useCard {
-  width: calc(40%);
+  width: calc(40% - 3vw);
   height: 10rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -71,6 +71,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
   cursor: pointer;
   transition: all ease-in-out 180ms;
 }

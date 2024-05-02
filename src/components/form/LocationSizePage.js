@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import classes from "./css/Form.module.css";
 import FormContext from "../form/store/form-context";
 
@@ -11,20 +11,24 @@ function LocationSizePage() {
     setSize(selectedSize);
   };
 
-  // Function to handle the click of the Next button
   const handleNextClick = () => {
+    // Check if size is selected
     if (size) {
-      // If size is selected
-      setFormData((prevData) => ({
-        ...prevData,
-        size: size,
-      }));
-      setCurrentPage(7); // Assuming 7 is the index of the next page
+      // Update form data with selected size
+      setFormData((prevData) => ({ ...prevData, size: size }));
+      // Proceed to the next page
+      setCurrentPage(page => page + 1);
     } else {
-      // If size is not selected
-      alert("Please select the size of the location.");
+      // Display an error message if size is not selected
+      alert("Please select a size to proceed.");
     }
   };
+
+  // Set the initial value of size when the component mounts
+  useEffect(() => {
+    // Retrieve the size value from formData and set it as the initial state
+    setSize(formData.size || "");
+  }, []);
 
   return (
     <div className={classes.container}>
@@ -103,6 +107,9 @@ function LocationSizePage() {
           </label>
         </div>
       </div>
+      <button className="button" onClick={handleNextClick}>
+        Next
+      </button>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { Navigate } from "react-router-dom";
+import LandingFormPage from "../../form/LandingFormPage.jsx";
 
 /****Layouts*****/
 const FullLayout = lazy(() => import("../../UI/Dashboard/FullLayout.js"));
@@ -21,6 +22,8 @@ const ThemeRoutes = [
       { path: "starter", exact: true, element: <Starter /> },
       { path: "alerts", exact: true, element: <Alerts /> },
       { path: "table", exact: true, element: <Tables /> },
+      { path: "add-house", exact: true, element: <LandingFormPage /> },
+      
     ],
   },
 ];
