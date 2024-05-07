@@ -1,8 +1,9 @@
 .outerContainer {
+    position: relative;
     display: flex;
-    width: 95vw;
+    width: 90vw;
     max-width: 25rem;
-    height: 16vh;
+    height: 10vh;
     place-items: center;
     justify-content: center;
 
@@ -50,7 +51,7 @@
 
 .progressBar {
     -webkit-appearance: none;
-     appearance: none;
+     appearance: unset;
   }
   
 .progressBar::-moz-progress-bar{

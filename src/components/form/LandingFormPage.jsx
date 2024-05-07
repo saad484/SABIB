@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import PaginateBar from "./PaginateBar";
 import classes from "./css/LandingFormPage.module.css";
 import TypeOfLocation from "./TypeOfLocation";
 import CongratzPage from "./CongratzPage";
@@ -17,9 +16,9 @@ function LandingFormPage() {
   const { page, numOfPages } = useContext(FormContext);
 
   return (
-    
+    <div >
     <div className={classes.form}>
-      <PaginateBar />
+      
       <div className="card-form">
         {page === 1 && <TypeOfLocation />}
         {page === 2 && <UsagePage />}
@@ -32,6 +31,8 @@ function LandingFormPage() {
         {page === 9 && <CongratzPage />}
       </div>
     </div>
+    </div>
+
   );
 }
 

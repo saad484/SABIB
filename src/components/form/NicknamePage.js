@@ -31,10 +31,17 @@ function NicknamePage() {
       alert("Please provide a nickname to proceed.");
     }
   };
+  const handleBackClick = () => {
+    setCurrentPage((page) => page - 1);
+  };
+
 
   return (
     <div className={classes.container}>
-      <h1>Give a location nickname</h1>
+            <span className={`${classes.container} ${classes.headings}`}>
+
+      <h3>Give a location nickname</h3>
+</span>
       <div className="mb-3">
         <label htmlFor="nicknameInput" className="form-label">
           Nickname
@@ -48,9 +55,14 @@ function NicknamePage() {
         />
         {validation.nickname === false && <div className="invalid-feedback">Nickname should not be empty</div>}
       </div>
-      <button className="button" onClick={handleNextClick}>
-        Next
-      </button>
+      <div className={classes.navigationButtons}>
+        <button className={`button-back ${classes.customButton}`} onClick={handleBackClick}>
+          Back
+        </button>
+        <button className={`button  ${classes.customButton}`} onClick={handleNextClick}>
+          Next
+        </button>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import classes from "./css/Form.module.css";
 import FormContext from "../form/store/form-context";
+import Checkbox from '@mui/material/Checkbox';
+
 
 function ApplianceAndAmenitiesPage() {
   const { formData, setFormData, setCurrentPage } = useContext(FormContext);
@@ -18,7 +20,7 @@ function ApplianceAndAmenitiesPage() {
 
   const outdoors = [
     "Swimming Pool",
-    "Swimming Pool with auto Pool Filter",
+    "Swimming Pool with Auto Pool Filter",
     "Hot Tub",
     "Fountain",
     "Pond",
@@ -59,42 +61,60 @@ function ApplianceAndAmenitiesPage() {
     // Move to the next page
     setCurrentPage((prevPage) => prevPage + 1);
   };
+  const handleBackClick = () => {
+    setCurrentPage((page) => page - 1);
+  };
 
   return (
     <div className={classes.container}>
-      <h1>Appliance and Amenities</h1>
-      <div>
-        <h2>Indoors:</h2>
-        {indoors.map((option) => (
-          <div key={option}>
-            <input
-              type="checkbox"
-              id={option}
-              checked={selectedIndoorOptions.includes(option)}
-              onChange={() => handleIndoorOptionSelect(option)}
-            />
-            <label htmlFor={option}>{option}</label>
-          </div>
-        ))}
+      <h3 className={classes.heading}>Appliance and Amenities</h3>
+      <div className={classes.optionsContainer}>
+        <div className={classes.optionCategory}>
+          <h4 className={classes.subHeading}>Indoors:</h4>
+          {indoors.map((option) => (
+            <div key={option} className={classes.checkboxOption}>
+              <Checkbox
+                checked={selectedIndoorOptions.includes(option)}
+                onChange={() => handleIndoorOptionSelect(option)}
+                color="primary"
+                inputProps={{ 'aria-label': 'controlled' }}
+              />
+              <label htmlFor={option} className={classes.checkboxLabel}>
+                {option}
+              </label>
+            </div>
+          ))}
+        </div>
+
+        <div className={classes.optionCategory}>
+          <h4 className={classes.subHeading}>Outdoors:</h4>
+          {outdoors.map((option) => (
+            <div key={option} className={classes.checkboxOption}>
+              <Checkbox
+                checked={selectedOutdoorOptions.includes(option)}
+                onChange={() => handleOutdoorOptionSelect(option)}
+                color="primary"
+                inputProps={{ 'aria-label': 'controlled' }}
+              />
+              <label htmlFor={option} className={classes.checkboxLabel}>
+                {option}
+              </label>
+            </div>
+          ))}
+        </div>
       </div>
-      <div>
-        <h2>Outdoors:</h2>
-        {outdoors.map((option) => (
-          <div key={option}>
-            <input
-              type="checkbox"
-              id={option}
-              checked={selectedOutdoorOptions.includes(option)}
-              onChange={() => handleOutdoorOptionSelect(option)}
-            />
-            <label htmlFor={option}>{option}</label>
-          </div>
-        ))}
+
+      <div className={classes.navigationButtons}>
+        <button className={`button-back ${classes.customButton}`} onClick={handleBackClick}>
+          Back
+        </button>
+        <button className={`button  ${classes.customButton}`} onClick={handleNextClick}>
+          Next
+        </button>
       </div>
-      <button className="button" onClick={handleNextClick}>
-        Next
-      </button>
-    </div>
+      </div>
+
+    
   );
 }
 

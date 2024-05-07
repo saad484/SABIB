@@ -52,16 +52,15 @@ function TypeOfLocation() {
   return (
     <>
       <span className={`${classes.container} ${classes.headings}`}>
-        <h1>What type of location is this?</h1>
+        <h3>What type of location is this?</h3>
       </span>
 
       <div className={classes.container_row}>
         {types.map((item) => (
           <div
             key={item.id}
-            className={`${classes.useCard} ${
-              formData.type === item.id ? classes.active : ""
-            }`}
+            className={`${classes.useCard} ${formData.type === item.id ? classes.active : ""
+              }`}
             onClick={() => insertType(item.id)}
           >
             {item.icon}

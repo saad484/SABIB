@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import '../../form/css/global.css';
+
 import {
   Navbar,
   Collapse,
@@ -12,52 +14,30 @@ import {
   DropdownItem,
   Dropdown,
   Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
 } from "reactstrap";
-import Logo from "../../../assets/img/sabib.png"; // Import your logo image
+import Logo from "../../../assets/img/sabib.png";
 import { UserButton } from "@clerk/clerk-react";
+import LandingFormPage from "../../form/LandingFormPage";
+import FormProvider from "../../form/FromProvider";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [dropdownOpen, setDropdownOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
-  const toggle = () => setDropdownOpen((prevState) => !prevState);
-  const Handletoggle = () => {
-    setIsOpen(!isOpen);
-  };
-  const showMobilemenu = () => {
-    document.getElementById("sidebarArea").classList.toggle("showSidebar");
-  };
+  const toggle = () => setIsOpen(!isOpen);
+  const toggleModal = () => setModalOpen(!modalOpen);
 
   return (
     <Navbar color="info" dark expand="md">
-      <div className="d-flex align-items-center">
-        {/* Replace NavbarBrand with your logo image */}
-        <NavbarBrand href="/" className="d-lg-none">
-          <img src={Logo} alt="Logo" style={{ width: "40px" }} /> {/* Adjust width as needed */}
-        </NavbarBrand>
-        <Button
-          color="info"
-          className="d-lg-none"
-          onClick={() => showMobilemenu()}
-        >
-          <i className="bi bi-list"></i>
-        </Button>
-      </div>
-      <div className="hstack gap-2">
-        <Button
-          color="info"
-          size="sm"
-          className="d-sm-block d-md-none"
-          onClick={Handletoggle}
-        >
-          {isOpen ? (
-            <i className="bi bi-x"></i>
-          ) : (
-            <i className="bi bi-three-dots-vertical"></i>
-          )}
-        </Button>
-      </div>
-
+      <NavbarBrand href="/" className="d-lg-none">
+        <img src={Logo} alt="Logo" style={{ width: "40px" }} />
+      </NavbarBrand>
+      <Button color="info" className="d-lg-none" onClick={toggle}>
+        {isOpen ? <i className="bi bi-x"></i> : <i className="bi bi-three-dots-vertical"></i>}
+      </Button>
       <Collapse navbar isOpen={isOpen}>
         <Nav className="me-auto" navbar>
           <NavItem>
@@ -75,8 +55,8 @@ const Header = () => {
               DD Menu
             </DropdownToggle>
             <DropdownMenu end>
-              <DropdownItem><Link to='add-house'>Add House</Link></DropdownItem>
-              <DropdownItem>Option 2</DropdownItem>
+              <DropdownItem onClick={toggleModal}>Add House</DropdownItem>
+              <DropdownItem>Add Device</DropdownItem>
               <DropdownItem divider />
               <DropdownItem>Reset</DropdownItem>
             </DropdownMenu>
@@ -84,6 +64,15 @@ const Header = () => {
         </Nav>
         <UserButton />
       </Collapse>
+
+      <Modal isOpen={modalOpen} toggle={toggleModal} size="lg">
+        <ModalHeader toggle={toggleModal} style={{ backgroundColor: "white", borderBottom: "none" }}>Add House</ModalHeader>
+        <ModalBody  style={{ backgroundColor: "white",}}>
+          <div  style={{minWidth: '100px', height: '100%', overflowY: "auto" }}>
+          <FormProvider />
+          </div>
+        </ModalBody>
+      </Modal>
     </Navbar>
   );
 };

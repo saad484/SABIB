@@ -20,15 +20,22 @@ function UsagePage() {
   const handleNextClick = () => {
     // Move to the next page if the selection is valid
     if (validation.usage) {
-      setCurrentPage(page => page + 1);
+      setCurrentPage((page) => page + 1);
     } else {
       alert("Please select an option to proceed.");
     }
   };
 
+   const handleBackClick = () => {
+    setCurrentPage((page) => page - 1);
+  };
+
   return (
     <div className={classes.container}>
-      <h1>How do you use this location?</h1>
+      <span className={`${classes.container} ${classes.headings}`}>
+        <h3>How do you use this location?</h3>
+      </span>
+
       {usageOptions.map((option) => (
         <div key={option.id} className="mb-2 mt-4">
           <input
@@ -42,17 +49,23 @@ function UsagePage() {
           />
           <label
             htmlFor={option.id}
-            className={`btn btn-outline-primary ${formData.usage === option.id ? "active" : ""}`}
+            className={`btn btn-outline-primary ${formData.usage === option.id ? "active" : ""} ${classes.customButton}`}
             style={{ cursor: "pointer" }}
           >
             {option.label}
           </label>
         </div>
       ))}
-      <button className="button" onClick={handleNextClick}>
-        Next
-      </button>
-    </div>
+     <div className={classes.navigationButtons}>
+        <button className={`button-back ${classes.customButton}`} onClick={handleBackClick}>
+          Back
+        </button>
+        <button className={`button  ${classes.customButton}`} onClick={handleNextClick}>
+          Next
+        </button>
+      </div>
+      </div>
+    
   );
 }
 

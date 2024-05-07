@@ -5,7 +5,7 @@ import './Login.css';
 function Login() {
   return (
       <div className="login-container"> {/* Add a class name for styling */}
-        <SignIn  afterSignInUrl="/dashboard" signUpUrl='/signup'/>
+        <SignIn  signUpUrl='/signup'/>
       </div>
   
   );

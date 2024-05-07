@@ -6,7 +6,7 @@ import Header from '../../components/UI/Header/Header';
 function Signup() {
   return (
     <div className="login-container"> {/* Add a class name for styling */}
-      <SignUp afterSignUpUrl={"/dashboard"} signInUrl='/login'/>
+      <SignUp  signInUrl='/login'/>
     </div>
 
   )

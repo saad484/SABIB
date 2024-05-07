@@ -23,6 +23,11 @@ function LocationSizePage() {
       alert("Please select a size to proceed.");
     }
   };
+  const handleBackClick = () => {
+    setCurrentPage((page) => page - 1);
+  };
+
+
 
   // Set the initial value of size when the component mounts
   useEffect(() => {
@@ -32,7 +37,9 @@ function LocationSizePage() {
 
   return (
     <div className={classes.container}>
-      <h1>How big is this location?</h1>
+      <span className={`${classes.container} ${classes.headings}`}>
+        <h3>How big is this location?</h3>
+      </span>
       <div className="btn-group-vertical">
         <div className="mb-2 mt-4">
           <input
@@ -46,13 +53,14 @@ function LocationSizePage() {
           />
           <label
             htmlFor="lessThan60"
-            className={`btn btn-outline-primary ${size === "Less than 60 m2" ? "active" : ""}`}
+            className={`btn btn-outline-primary ${size === "Less than 60 m2" ? "active" : ""} ${classes.customButton}`}
             style={{ cursor: "pointer" }}
           >
             Less than 60 m2
           </label>
         </div>
-        <div className="mb-2 mt-4">
+
+    <div className="mb-2 mt-4">
           <input
             type="radio"
             id="60to80"
@@ -105,11 +113,15 @@ function LocationSizePage() {
           >
             More than 120 m2
           </label>
-        </div>
+        </div>      </div>
+        <div className={classes.navigationButtons}>
+        <button className={`button-back ${classes.customButton}`} onClick={handleBackClick}>
+          Back
+        </button>
+        <button className={`button  ${classes.customButton}`} onClick={handleNextClick}>
+          Next
+        </button>
       </div>
-      <button className="button" onClick={handleNextClick}>
-        Next
-      </button>
     </div>
   );
 }
