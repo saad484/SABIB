@@ -17,7 +17,7 @@ export const    useDetails = () => {
                 await firebase.auth().signInWithCustomToken(firebaseToken);
 
                 const tempDetails = [];
-                const db = firebase.firestore(); // Initialize Firestore here
+                const db = firebase.firestore();
                 const user_form = await db.collection("user_form").get();
                 user_form.forEach((detail) => {
                     tempDetails.push(detail.data());

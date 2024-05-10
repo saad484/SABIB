@@ -1,7 +1,6 @@
 import React from 'react'
 import { SignUp } from '@clerk/clerk-react';
 import './Login.css';
-import Header from '../../components/UI/Header/Header';
 
 function Signup() {
   return (

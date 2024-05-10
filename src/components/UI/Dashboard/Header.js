@@ -52,7 +52,7 @@ const Header = () => {
           </NavItem>
           <UncontrolledDropdown inNavbar nav>
             <DropdownToggle caret nav>
-              DD Menu
+              Menu
             </DropdownToggle>
             <DropdownMenu end>
               <DropdownItem onClick={toggleModal}>Add House</DropdownItem>
