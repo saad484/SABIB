@@ -71,11 +71,11 @@ const Nav = () => {
             </li>
             <li className='nav-item'>
               <Link to='/login' isExternal={true} classes='nav-link'>
-                Login
+                Dashboard
               </Link>
             </li>
+            <UserButton />
           </ul>
-          <UserButton />
 
         </div>
 

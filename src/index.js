@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,6 +10,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import Login from './components/auth/Login';
 import Signup from './components/auth/Signup';
 import Loader from './components/UI/Dashboard/loader/Loader';
+
 import firebase from 'firebase/compat/app'; // Import Firebase from compat module
 import 'firebase/compat/auth';
 import { firebaseConfig } from './config/firebase'; // Assuming firebaseConfig.js contains your Firebase config
@@ -23,16 +24,6 @@ if (!firebase.apps.length) {
   firebase.app();
 }
 
-const AuthenticatedRoute = ({ element }) => {
-  const { signedIn } = useUser();
-
-  if (!signedIn) {
-    return <Navigate to="/login" />;
-  }
-
-  return element;
-};
-
 const ClerkWithRoutes = () => {
   return (
     <ClerkProvider publishableKey={publishableKey}>
@@ -40,20 +31,19 @@ const ClerkWithRoutes = () => {
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/dashboard/*"  element={<Dashboard />}  />
+        {/* Protected route for the dashboard */}
+        <Route path="/dashboard" element={<Dashboard />}/>
       </Routes>
     </ClerkProvider>
   );
 };
 
 ReactDOM.render(
-  <Suspense fallback={<Loader />}>
-    <React.StrictMode>
-      <BrowserRouter>
-        <ClerkWithRoutes />
-      </BrowserRouter>
-    </React.StrictMode>
-  </Suspense>,
+  <React.StrictMode>
+    <BrowserRouter>
+      <ClerkWithRoutes />
+    </BrowserRouter>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

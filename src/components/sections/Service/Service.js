@@ -104,7 +104,7 @@ const Service = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center py-20 text-center bg-white bg-opacity-0">
+          {/* <div className="flex flex-col items-center py-20 text-center bg-white bg-opacity-0">
             <h3 className="custom-color fw-bold mb-5 pt-5">
               How It Works
               <br />
@@ -118,7 +118,7 @@ const Service = () => {
               src={how} alt='how it works'
               className="w-100"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </Section>

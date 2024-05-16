@@ -23,11 +23,8 @@ const TopBar = () => {
             <a href='!#' className='text-light social-media-link'>
               <i className='fab fa-twitter' />
             </a>
-            <a href='!#' className='text-light social-media-link'>
+            <a href='https://www.instagram.com/sabib.team/' className='text-light social-media-link'>
               <i className='fab fa-instagram' />
-            </a>
-            <a href='!#' className='text-light social-media-link'>
-              <i className='fab fa-github' />
             </a>
           </div>
         </div>
