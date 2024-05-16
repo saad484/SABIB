@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# SABIB
+## Save Today, Secure Tomorrow
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Overview 
+The Sabib Water Flow Measurement System is a revolutionary project aimed at addressing water scarcity challenges through innovative technology. This system utilizes advanced sensors and a centralized database to provide real-time monitoring of water usage, empowering users to manage their consumption efficiently. Additionally, it incorporates features such as remote water shut-off to mitigate wastage and promote conservation efforts.
 
-## Available Scripts
+### Demo https://sabib.team/
 
-In the project directory, you can run:
+### Presentation
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation 
+- Hardware Setup: Install the sensors along the main water pipeline according to the provided instructions. Connect the sensors to the centralized database unit.
 
-### `npm test`
+- Software Setup: Access the web application through a compatible web browser. Follow the on-screen instructions to log in and connect to the centralized database.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Usage 
+- Monitoring Water Usage: Log in to the web application to view real-time data on water consumption, flow rate, and other relevant metrics.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Setting Alerts: Customize alert settings within the web application to receive notifications about unusual water usage or potential leaks.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Remote Control: Utilize the web application to remotely activate or deactivate the water shut-off device, providing convenient control over water supply.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Front-End
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+#### Back-End
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Version Control and Collaboration
 
-### Code Splitting
+- Git: Disributed Version Control System.
+- GitHub: Web-based platform for Version Control and Collaboration 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Cloud Services And Deployement
+- Namecheap: Domain registration and Management.
+- Vercel:  Vercel offers Deployment Protection to secure your project's preview and production URLs with fine-grained access control.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### Contributing:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+We welcome contributions from developers, engineers, and enthusiasts interested in advancing water conservation technologies. Please refer to the contribution guidelines in the project repository for more information.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
