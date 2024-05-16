@@ -7,7 +7,7 @@ The Sabib Water Flow Measurement System is a revolutionary project aimed at addr
 ### Demo https://sabib.team/
 
 ### Presentation
-
+![alt text](image.png)
 
 
 ### Installation 
@@ -26,12 +26,25 @@ The Sabib Water Flow Measurement System is a revolutionary project aimed at addr
 
 ### Technologies
 
+#### Design 
+- Figma is an excellent tool for designing user interfaces and creating prototypes. [design link](https://www.figma.com/design/fY457IQ5zDLcJEGPKG2d0F/Sabib?node-id=0%3A1&t=EFgJ3JbrysYRHq0j-1)
+
+
 #### Front-End
-
-
-
+- React: A popular JavaScript library for building user interfaces.
+- Heroicons: A set of icons for use in web projects.
+- Bootstrap Icons: Provides a library of icons for use with Bootstrap.
+- Material-UI: A React UI framework that implements Google's Material Design.
+- React ApexCharts: A React wrapper for ApexCharts, which is used for interactive charts and graphs.
+- React Input Slider: A customizable slider component for React.
+- Sass: A preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).
+- Font Awesome: A library of icons and fonts.
 
 #### Back-End
+- Clerk React: Provides authentication and user management functionalities.
+- Firebase: Provides backend services such as authentication, real-time database, and hosting.
+- ThingSpeak: IoT platform for collecting and storing data from the Sabib Water Flow Measurement System's sensors.
+
 
 
 #### Version Control and Collaboration
@@ -47,5 +60,6 @@ The Sabib Water Flow Measurement System is a revolutionary project aimed at addr
 
 ### Contributing:
 
-We welcome contributions from developers, engineers, and enthusiasts interested in advancing water conservation technologies. Please refer to the contribution guidelines in the project repository for more information.
+We welcome contributions from developers, engineers, and enthusiasts interested in advancing water conservation technologies.
+
 
