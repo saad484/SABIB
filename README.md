@@ -6,9 +6,6 @@ The Sabib Water Flow Measurement System is a revolutionary project aimed at addr
 
 ### Demo https://sabib.team/
 
-### Presentation
-![alt text](image.png)
-
 
 ### Installation 
 - Hardware Setup: Install the sensors along the main water pipeline according to the provided instructions. Connect the sensors to the centralized database unit.
@@ -58,8 +55,21 @@ The Sabib Water Flow Measurement System is a revolutionary project aimed at addr
 
 
 
+### Screenshot
+![alt text](image.png)
+
+### Presntation Slides 
+[Presenataion slides](https://www.canva.com/design/DAGFL0778F0/cFZHv6uFMbV1Vi1jdZmztQ/edit?utm_content=DAGFL0778F0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+
+
+
+
 ### Contributing:
 
 We welcome contributions from developers, engineers, and enthusiasts interested in advancing water conservation technologies.
 
-
+### Author
+- [Saad AIDDI](https://github.com/saad484)
+- [LinkedIn](https://linkedin.com/in/saad-aiddi)
+- [Gmail](mailto:sabib.team@gmail.com)
