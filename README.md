@@ -56,7 +56,7 @@ The Sabib Water Flow Measurement System is a revolutionary project aimed at addr
 
 
 ### Screenshot
-![alt text](image.png)
+![alt text](screencapture-sabib-team-2024-05-16-15_22_46.png)
 
 ### Presntation Slides 
 [Presenataion slides](https://www.canva.com/design/DAGFL0778F0/cFZHv6uFMbV1Vi1jdZmztQ/edit?utm_content=DAGFL0778F0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
