@@ -73,3 +73,7 @@ We welcome contributions from developers, engineers, and enthusiasts interested 
 - [Saad AIDDI](https://github.com/saad484)
 - [LinkedIn](https://linkedin.com/in/saad-aiddi)
 - [Gmail](mailto:sabib.team@gmail.com)
+
+
+### LICENSE
+[LICENSE](LICENSE)
