@@ -18,11 +18,13 @@ export const    useDetails = () => {
 
                 const tempDetails = [];
                 const db = firebase.firestore();
-                const user_form = await db.collection("user_form").get();
+            
+                const user_form = await db.collection("user_form").doc(clerkUser.id).get();
                 user_form.forEach((detail) => {
                     tempDetails.push(detail.data());
                 });
-                
+
+
                 setDetails(tempDetails);
             } catch (err){
                 setError(err); 
