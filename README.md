@@ -66,7 +66,7 @@ The Sabib Water Flow Measurement System is a revolutionary project aimed at addr
 
 
 ### Contributing:
-Special thanks to (Josh-Techie)[https://github.com/josh-techie] for collaboration, especially in the electrical part.
+Special thanks to [Josh-Techie](https://github.com/josh-techie) for collaboration, especially in the electrical part.
 We welcome contributions from developers, engineers, and enthusiasts interested in advancing water conservation technologies.
 
 ### Author
