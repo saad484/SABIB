@@ -5,7 +5,7 @@
 The Sabib Water Flow Measurement System is a revolutionary project aimed at addressing water scarcity challenges through innovative technology. This system utilizes advanced sensors and a centralized database to provide real-time monitoring of water usage, empowering users to manage their consumption efficiently. Additionally, it incorporates features such as remote water shut-off to mitigate wastage and promote conservation efforts.
 
 ### Demo https://sabib.team/
-
+### Video Recap Teaser [here](https://www.youtube.com/watch?v=G7SVpNwDWdk)
 
 ### Installation 
 - Hardware Setup: Install the sensors along the main water pipeline according to the provided instructions. Connect the sensors to the centralized database unit.
