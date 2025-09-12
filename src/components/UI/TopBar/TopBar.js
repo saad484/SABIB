@@ -8,7 +8,7 @@ const TopBar = () => {
         <div className='top-bar-content'>
           <div className='icon-container'>
             <i className='fas fa-phone-alt m-2'/>
-            <small>+212 (0) 637765253</small>
+            <small>+212 (0) 66666666</small>
           </div>
           <div className='icon-container'>
             <i className='fas fa-envelope m-2' />
