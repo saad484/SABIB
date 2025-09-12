@@ -81,7 +81,7 @@ const footer = () => {
                 <small>Address : Universiapolis - Salon Feecra</small>
               </p>
               <p className='text-muted'>
-                <small>Phone : +213 (0) 637765253</small>
+                <small>Phone : +213 (0) 666666666</small>
               </p>
               <p className='text-muted'>
                 <small>E-mail : sabib.team@gmail.com</small>
